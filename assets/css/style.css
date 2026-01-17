@@ -1,0 +1,207 @@
+:root {
+  --navy: #0f3c4c;
+  --teal: #1fa4a9;
+  --light: #f7fbfc;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  background: white;
+  color: #123;
+}
+
+/* Styling navigation bar on top */
+.navbar {
+  background: white;
+  border-bottom: 1px solid #eee;
+}
+
+.nav-container {
+  max-width: 1100px;
+  min-width: 500px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+.nav-links {
+  min-width: 500px;
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--navy);
+  font-weight: 500;
+}
+
+.nav-links .cta {
+  background: var(--teal);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+}
+
+.hero {
+  background: linear-gradient(135deg, var(--navy), var(--teal));
+  color: white;
+  padding: 5rem 1rem;
+}
+
+.hero-content {
+  max-width: 1100px;
+  margin: auto;
+}
+
+.hero-buttons a {
+  margin-right: 1rem;
+  padding: 0.7rem 1.2rem;
+  border-radius: 6px;
+  text-decoration: none;
+}
+
+.btn-primary {
+  background: white;
+  color: var(--navy);
+}
+
+.btn-secondary {
+  border: 1px solid white;
+  color: white;
+}
+
+.section {
+  max-width: 1100px;
+  margin: auto;
+  padding: 3rem 1rem;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  max-width: 1100px;
+  margin: auto;
+  padding: 2rem 1rem;
+}
+
+.card {
+  background: var(--light);
+  padding: 1.5rem;
+  border-radius: 12px;
+}
+
+/* Footer design */
+.site-footer {
+  background: #f7fbfc;
+  border-top: 1px solid #e5eef0;
+  padding: 2.5rem 1rem;
+  margin-top: 4rem;
+}
+
+.footer-container {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+}
+
+.footer-title {
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-bottom: 0.25rem;
+}
+
+.footer-tagline {
+  font-size: 0.9rem;
+  color: #456;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-links a {
+  color: #0f3c4c;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.footer-right {
+  font-size: 0.85rem;
+  color: #456;
+}
+
+.footer-license a {
+  color: #1fa4a9;
+  text-decoration: none;
+}
+
+/* Member page */
+.members-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.member-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.member-photo {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+.member-role {
+  font-size: 0.9rem;
+  opacity: 0.8;
+  margin-bottom: 0.5rem;
+}
+
+.member-affiliation {
+  font-size: 0.85rem;
+  opacity: 0.65;
+  margin-bottom: 0.75rem;
+}
+
+.member-bio {
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.member-links a {
+  margin: 0 0.4rem;
+  font-size: 0.85rem;
+  text-decoration: none;
+}
+
+/* Icon colors */
+.member-icon {
+  color: #666666;
+}
+
+.fa-discord {
+  color: #7289da;
+}

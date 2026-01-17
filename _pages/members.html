@@ -1,0 +1,69 @@
+---
+layout: default
+title: Members
+permalink: /members/
+---
+
+<section class="section">
+  <h1>Community Members</h1>
+
+  <div class="members-grid">
+    {% assign sorted = site.members | sort: "name" %}
+    {% for member in sorted %}
+      <div class="member-card">
+
+        <img
+          src="{{ member.photo }}"
+          alt="Photo of {{ member.name }}"
+          class="member-photo"
+        >
+
+        <h3>{{ member.name }}</h3>
+        <p class="member-role">{{ member.role }}</p>
+
+        <p class="member-affiliation">
+          {{ member.affiliation }}
+        </p>
+
+        <p class="member-bio">
+          "
+          {{ member.bio }}
+          "
+        </p>
+
+        <div class="member-links">
+
+          {% if member.links.orcid %}
+            <a href="{{ member.links.orcid }}" target="_blank"
+               aria-label="ORCID" class="member-icon">
+              <i class="fa-brands fa-orcid"></i>
+            </a>
+          {% endif %}
+
+          {% if member.links.researchgate %}
+            <a href="{{ member.links.researchgate }}" target="_blank"
+               aria-label="ResearchGate" class="member-icon">
+              <i class="fa-brands fa-researchgate"></i>
+            </a>
+          {% endif %}
+
+          {% if member.links.google_scholar %}
+            <a href="{{ member.links.google_scholar }}" target="_blank"
+               aria-label="Google Scholar" class="member-icon">
+              <i class="fa-solid fa-graduation-cap"></i>
+            </a>
+          {% endif %}
+
+          {% if member.links.website %}
+            <a href="{{ member.links.website }}" target="_blank"
+               aria-label="Website" class="member-icon">
+              <i class="fa-solid fa-globe"></i>
+            </a>
+          {% endif %}
+
+        </div>
+
+      </div>
+    {% endfor %}
+  </div>
+</section>
