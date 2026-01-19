@@ -184,7 +184,8 @@ body {
 
 .footer-license a,
 .blog-content a,
-.blog-author a {
+.blog-author a,
+.event-card a {
   color: var(--teal);
   text-decoration: none;
 }
@@ -347,6 +348,50 @@ body {
 .blog-content p {
   line-height: 1.6;
   margin-bottom: 1.2rem;
+}
+
+/* Events */
+.events-list {
+  display: grid;
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+.event-card {
+  background: var(--light);
+  padding: 1.5rem 1.75rem;
+  border-radius: 12px;
+}
+
+.event-meta {
+  font-size: 0.8rem;
+  color: #567;
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 0.25rem;
+}
+
+.event-type {
+  font-weight: 600;
+  color: var(--teal);
+}
+
+.event-title {
+  margin: 0.3rem 0 0.6rem;
+}
+
+.event-details {
+  font-size: 0.85rem;
+  color: #456;
+  margin-bottom: 0.75rem;
+}
+
+.event-description p {
+  margin-bottom: 0.5rem;
+}
+
+.event-link {
+  margin-top: 0.75rem;
 }
 
 

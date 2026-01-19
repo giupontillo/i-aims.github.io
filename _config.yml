@@ -41,6 +41,8 @@ include:
 collections:
   members:
     output: false
+  events:
+    output: false
 
 # Exclude from processing.
 # The following items will not be processed, by default.

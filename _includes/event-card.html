@@ -1,0 +1,47 @@
+<article class="event-card">
+  <div class="event-meta">
+    <span class="event-type">{{ event.type }}</span>
+    <span class="event-date">
+        {% if event.date %}
+          {{ event.date | date: "%B %d, %Y" }}
+        {% endif %}
+    </span>
+  </div>
+
+  <h3 class="event-title">{{ event.title }}</h3>
+
+  <p class="event-details">
+      {% if event.date %}
+        📅 {{ event.date | date: "%d/%m/%Y" }}<br>
+      {% else %}
+        📅 TBA<br>
+      {% endif %}
+
+      {% if event.time and event.timezone %}
+        🕒 {{ event.time }} ({{ event.timezone }}) <br>
+      {% else %}
+        🕒 TBA <br>
+      {% endif %}
+
+      {% if event.location %}
+        📍 {{ event.location }}
+      {% else %}
+        📍 TBA <br>
+      {% endif %}
+  </p>
+
+  <div class="event-description">
+    {{ event.content | markdownify }}
+  </div>
+
+  {% if event.link %}
+    <p class="hero-buttons">
+    <ul class="nav-links">
+      <a class="cta"
+         href="{{ event.link }}">
+        Join Meeting
+      </a>
+    </ul>
+    </p>
+  {% endif %}
+</article>

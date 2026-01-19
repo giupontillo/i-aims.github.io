@@ -3,11 +3,31 @@ layout: default
 title: Events
 permalink: /events/
 ---
+
 <section class="section">
-    <h1>
-        Events
-    </h1>
-    <p>
-        In preparation <i class="fa fa-cog fa-spin fa-3x fa-fw" style="font-size:30px;"></i>
-    </p>
+  <h1>Events</h1>
+  <p class="section-intro">
+    Upcoming and past activities organized by the iAIMS community.
+  </p>
+
+  {% assign upcoming = site.events | where: "status", "upcoming" | sort: "date" %}
+  {% assign past = site.events | where: "status", "past" | sort: "date" | reverse %}
+
+  {% if upcoming.size > 0 %}
+  <h2>Upcoming</h2>
+  <div class="events-list">
+    {% for event in upcoming %}
+      {% include event-card.html event=event %}
+    {% endfor %}
+  </div>
+  {% endif %}
+
+  {% if past.size > 0 %}
+  <h2>Past events</h2>
+  <div class="events-list">
+    {% for event in past %}
+      {% include event-card.html event=event %}
+    {% endfor %}
+  </div>
+  {% endif %}
 </section>
